@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_background"
-    tools:context=".activities.MainActivity">
+    tools:context="com.raywenderlich.android.alltherecipes.LoginActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -24,6 +24,7 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:src="@drawable/logo6"
+                android:contentDescription="Logo"
                 android:layout_gravity="center_horizontal"
                 />
 
@@ -33,6 +34,8 @@
                 android:layout_marginTop="20dp"
                 android:drawableStart="@drawable/ic_user"
                 android:hint="User Name"
+                android:inputType="textShortMessage"
+                android:autofillHints="Up to 8 characters"
                 android:drawablePadding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -44,6 +47,8 @@
                 android:layout_marginTop="10dp"
                 android:drawableStart="@drawable/ic_password"
                 android:hint="Password"
+                android:inputType="textPassword"
+                android:autofillHints="only characters"
                 android:drawablePadding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

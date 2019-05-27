@@ -45,7 +45,7 @@ class Game(
     }
 
     private fun loadJsonFromAsset(filename: String, context: Context): String? {
-      var json: String?
+      val json: String?
 
       try {
         val inputStream = context.assets.open(filename)
