@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+
+    <ImageView
+        android:id="@+id/game_pic"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        tools:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/game_list_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textSize="14sp"
+        tools:text="Price" />
+
+    <TextView
+        android:id="@+id/game_list_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="4dp"
+        android:maxLines="1"
+        android:paddingEnd="4dp"
+        android:textColor="#f70202"
+        android:textSize="16sp"
+        tools:text="Discount" />
+
+    <RelativeLayout
+        android:id="@+id/game_list_text_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/game_pic"
+        android:layout_toStartOf="@id/game_list_discount">
+
+        <TextView
+            android:id="@+id/game_list_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:textSize="18sp"
+            tools:text="Name" />
+
+
+        <TextView
+            android:id="@+id/game_list_release"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textSize="16sp"
+            android:text="Release" />
+
+        <TextView
+            android:id="@+id/game_list_developer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="45dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textSize="16sp"
+            android:text="Developer"/>
+
+        <TextView
+            android:id="@+id/game_list_platforms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="65dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textSize="16sp"
+            android:text="Platforms"/>
+
+    </RelativeLayout>
+</RelativeLayout>

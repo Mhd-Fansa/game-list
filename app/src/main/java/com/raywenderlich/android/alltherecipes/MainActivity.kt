@@ -1,18 +1,19 @@
 package com.raywenderlich.android.alltherecipes
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.content.ContextCompat
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.OrientationHelper
-import android.widget.ArrayAdapter
-import android.widget.LinearLayout
-import android.widget.ListView
 import com.androidnetworking.AndroidNetworking
 import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.ParsedRequestListener
 import com.raywenderlich.android.alltherecipes.model.Reqres
 import kotlinx.android.synthetic.main.activity_main.*
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -44,6 +45,14 @@ class MainActivity : AppCompatActivity() {
 
               })
 
-
+      game_list_view.setOnClickListener {
+          val i = Intent(this, GameDetailActivity::class.java)
+          startActivity(i)
+      }
   }
+    override fun onBackPressed() {
+        val i = Intent(Intent.ACTION_MAIN)
+        i.addCategory(Intent.CATEGORY_HOME)
+        startActivity(i)
+    }
 }

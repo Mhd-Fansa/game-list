@@ -1,8 +1,6 @@
 package com.raywenderlich.android.alltherecipes
 
 import android.content.Context
-import android.content.Intent
-import android.support.v4.content.ContextCompat.startActivity
 import android.support.v4.content.res.ResourcesCompat
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -12,17 +10,17 @@ import com.raywenderlich.android.alltherecipes.model.Game
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.list_item_game.view.*
 
-class MyAdapter(private val dataList: MutableList<Game>) : RecyclerView.Adapter<MyHolder>() {
+class MyAdapter2(private val dataList: MutableList<Game>) : RecyclerView.Adapter<MyHolder2>() {
 
     private lateinit var context: Context
-    override fun onCreateViewHolder(parent: ViewGroup, p1: Int): MyHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, p1: Int): MyHolder2 {
         context = parent.context
-        return MyHolder(LayoutInflater.from(context).inflate(R.layout.list_item_game, parent, false))
+        return MyHolder2(LayoutInflater.from(context).inflate(R.layout.activity_game_detail, parent, false))
     }
 
     override fun getItemCount(): Int = dataList.size
 
-    override fun onBindViewHolder(holder: MyHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyHolder2, position: Int) {
         val data = dataList[position]
 
         val gameNameTextView = holder.itemView.game_list_name
@@ -44,13 +42,9 @@ class MyAdapter(private val dataList: MutableList<Game>) : RecyclerView.Adapter<
         val price = "${data.price}"
         gamePriceTextView.text = price
         val discount = "${data.discountPrice}"
-        gameDiscountTextView.text = discount.orEmpty()
+        gameDiscountTextView.text = discount
 
         Picasso.get().load(data.imageUrl).into(gamePicImageView)
 
-
-        holder.itemView.setOnClickListener {
-
-        }
     }
 }
