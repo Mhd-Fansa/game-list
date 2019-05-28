@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/game_listDetail_view"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="150dp">
+    android:layout_height="150dp"
+    tools:context="com.raywenderlich.android.alltherecipes.GameDetailActivity">
 
     <ImageView
         android:id="@+id/game_pic"
@@ -31,7 +33,7 @@
         tools:text="Price" />
 
     <TextView
-        android:id="@+id/game_list_discount"
+        android:id="@+id/game_list_discount1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -50,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_toEndOf="@id/game_pic"
-        android:layout_toStartOf="@id/game_list_discount">
+        android:layout_toStartOf="@id/game_list_discount1">
 
         <TextView
             android:id="@+id/game_list_name"
@@ -58,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:textSize="18sp"
+            android:textSize="16sp"
             tools:text="Name" />
 
 
@@ -67,25 +69,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="25dp"
-            android:ellipsize="end"
-            android:maxLines="3"
-            android:textSize="16sp"
-            android:text="Release" />
-
-        <TextView
-            android:id="@+id/game_list_developer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:layout_marginTop="45dp"
             android:ellipsize="end"
             android:maxLines="3"
             android:textSize="16sp"
-            android:text="Developer"/>
+            tools:text="Release" />
 
         <TextView
-            android:id="@+id/game_list_platforms"
+            android:id="@+id/game_list_developer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -93,7 +84,18 @@
             android:ellipsize="end"
             android:maxLines="3"
             android:textSize="16sp"
-            android:text="Platforms"/>
+            tools:text="Developer"/>
+
+        <TextView
+            android:id="@+id/game_list_platforms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="85dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textSize="16sp"
+            tools:text="Platforms"/>
 
     </RelativeLayout>
 </RelativeLayout>

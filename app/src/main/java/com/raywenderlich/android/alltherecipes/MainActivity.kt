@@ -45,10 +45,6 @@ class MainActivity : AppCompatActivity() {
 
               })
 
-      game_list_view.setOnClickListener {
-          val i = Intent(this, GameDetailActivity::class.java)
-          startActivity(i)
-      }
   }
     override fun onBackPressed() {
         val i = Intent(Intent.ACTION_MAIN)
