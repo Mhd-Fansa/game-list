@@ -6,12 +6,9 @@ import android.support.v4.content.ContextCompat.startActivity
 import android.support.v4.content.res.ResourcesCompat
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import com.raywenderlich.android.alltherecipes.model.Game
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_game_detail.view.*
 import kotlinx.android.synthetic.main.list_item_game.view.*
 import kotlinx.android.synthetic.main.list_item_game.view.game_list_name
 import kotlinx.android.synthetic.main.list_item_game.view.game_list_price

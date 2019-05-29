@@ -2,13 +2,6 @@ package com.raywenderlich.android.alltherecipes
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.DividerItemDecoration
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.OrientationHelper
-import com.androidnetworking.AndroidNetworking
-import com.androidnetworking.error.ANError
-import com.androidnetworking.interfaces.ParsedRequestListener
-import com.raywenderlich.android.alltherecipes.model.Reqres
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_game_detail.*
 
