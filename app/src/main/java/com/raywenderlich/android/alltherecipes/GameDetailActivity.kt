@@ -25,5 +25,7 @@ class GameDetailActivity : AppCompatActivity() {
         game_list_developer.text = developer
         val imageUrl = intent.getStringExtra("imageUrl")
         Picasso.get().load(imageUrl).into(game_pic)
+        val platform = intent.getStringExtra("platform")
+        game_list_platforms.text = platform
     }
 }

@@ -29,6 +29,7 @@ class MyAdapter(private val dataList: MutableList<Game>) : RecyclerView.Adapter<
             intent.putExtra("discount", dataList[holder.adapterPosition].discountPrice)
             intent.putExtra("release", dataList[holder.adapterPosition].release)
             intent.putExtra("imageUrl", dataList[holder.adapterPosition].imageUrl)
+            intent.putExtra("platform", dataList[holder.adapterPosition].platforms.toString())
             context.startActivity(intent)
         }
         return holder
